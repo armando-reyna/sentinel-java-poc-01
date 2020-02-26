@@ -6,7 +6,7 @@ logfile="/home/ec2-user/ci/poc01.log"
 
 STATUS=$(curl http://localhost:8082/actuator/health)
 
-if [ $STATUS -eq "{"status":"UP"}" ]; then
+if [[ STATUS == *"UP"* ]]; then
   echo "Service is UP"
   exit 0
 else
