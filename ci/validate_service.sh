@@ -4,9 +4,9 @@ logfile="/home/ec2-user/ci/poc01.log"
 
 (tail -f -n0 $logfile &) | grep -q "Started Poc01Application"
 
-STATUS=$(curl http://localhost:8082/actuator/health)
+health=$(curl http://localhost:8082/actuator/health)
 
-if [[ STATUS == *"UP"* ]]; then
+if [[ $health == *"UP"* ]]; then
   echo "Service is UP"
   exit 0
 else
