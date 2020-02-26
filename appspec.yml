@@ -19,4 +19,4 @@ hooks:
   ValidateService:
     - location: validate_service.sh
       timeout: 3600
-      runas: codedeployuser
+      runas: ec2-user
