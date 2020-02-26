@@ -1,0 +1,8 @@
+server:
+  port: 8082
+logging:
+  file:
+    name: /home/ec2-user/ci/poc01.log
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p [%-10.10t] %c{1} - %msg%n"
