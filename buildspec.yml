@@ -17,6 +17,7 @@ phases:
       - mvn package
 artifacts:
   files:
-    - target/poc01-0.0.1-SNAPSHOT.jar
     - appspec.yml
+    - target/poc01-0.0.1-SNAPSHOT.jar
+    - ci/*.sh
   discard-paths: yes
