@@ -13,7 +13,7 @@ public class CalcController {
     private CalcService calcService;
 
     @GetMapping("/sum")
-    public Double sum(@RequestParam(name = "ammountx") Double ammount1, @RequestParam(name = "ammounty") Double ammount2){
+    public Double sum(@RequestParam(name = "ammount1") Double ammount1, @RequestParam(name = "ammount2") Double ammount2){
         return calcService.sum(ammount1, ammount2);
     }
 
