@@ -23,8 +23,8 @@ public class CalcControllerITTest {
     public void sum_shouldReturnJsonFormat() throws Exception {
         this.mockMvc.perform(MockMvcRequestBuilders
                 .get("/sum")
-                .param("ammountx", "1.0")
-                .param("ammounty", "1.0")
+                .param("ammount1", "1.0")
+                .param("ammount2", "1.0")
                 .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isOk())
