@@ -1,2 +1,2 @@
 #!/bin/bash
-ps -ef | grep 'java -jar' | grep -v grep | awk '{print $2}' | xargs kill
+kill $(ps aux | grep 'java -jar' | awk '{print $2}')
