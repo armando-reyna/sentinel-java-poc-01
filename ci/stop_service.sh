@@ -1,2 +1,2 @@
 #!/bin/bash
-pkill -f 'java -jar'
+ps -ef | grep 'java -jar' | grep -v grep | awk '{print $2}' | xargs kill
